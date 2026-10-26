@@ -1,0 +1,6 @@
+{
+  "name": "New Relook Barbershop | Toronto",
+  "description": "Neighborhood barbershop at 1054 Eglinton Ave W, Toronto. Haircuts, precision fades, beard grooming, and kids' cuts with Amir.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

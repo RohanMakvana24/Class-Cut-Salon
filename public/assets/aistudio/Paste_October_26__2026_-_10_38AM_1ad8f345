@@ -1,0 +1,1323 @@
+# Prompts
+
+## Phase 1 — Content and website structure
+
+### Goal
+
+Prepare a complete content and page-structure blueprint for the New Relook Barbershop website before design or development begins. The website will use English copy for customers in Toronto.
+
+### Design direction already agreed
+
+Follow the supplied desktop/mobile barbershop reference closely: dark brick background, black shadows, orange/gold highlights, tall condensed headings and a dramatic layered hero. The hero should have oversized white brand lettering behind a central transparent barber/person cutout, warm side lighting and a black fade at the bottom. Preserve this composition on mobile using a separate crop and text scale.
+
+The transparent person image will be generated with AI in a later phase. Treat it as a decorative model; do not present it as Amir or a real staff member. Shop and haircut photos will also be supplied later.
+
+### Phase 1 tasks
+
+1. Read `new-relook-barbershop-project.md` and separate supplied business facts, customer-reported details and information still requiring confirmation.
+2. Define the website audience, primary booking action and secondary contact actions.
+3. Plan a single-page website with section anchors and a clear desktop/mobile reading order.
+4. Draft concise English copy for each section, including headings, descriptions and button labels.
+5. Document the hero's layer order and desktop/mobile composition so later implementation follows the reference.
+6. Create a content inventory for services, reviews, links and future images.
+7. List missing information and define safe draft behavior for every missing item.
+8. Save the blueprint as `phase-1-content-plan.md` in this project folder.
+
+### Proposed page order
+
+| Order | Section | Content and purpose |
+| --- | --- | --- |
+| 1 | Header | Brand, section navigation, Book Now action; compact mobile menu |
+| 2 | Hero | Oversized New Relook lettering, central transparent model, short location line and booking action |
+| 3 | Services | Haircut and grooming categories; exact menu and prices require confirmation |
+| 4 | Meet Your Barber | Short introduction to Amir based on available evidence; no invented credentials |
+| 5 | Transformation Gallery | Future real haircut and before/after images in orange frames |
+| 6 | Customer Reviews | Faithful excerpts with reviewer names and a Google reviews link |
+| 7 | Visit and Book | Address, phone, directions, Instagram and Linktree booking; hours pending |
+| 8 | Footer | Brand, contact details, social links and concise navigation |
+
+The reference's product showcase is optional until product sales are confirmed. Use Meet Your Barber in place of the reference's blog area. Preserve the reference's visual rhythm through dark panels and orange section bands.
+
+### Information rules
+
+- Use the supplied Toronto address, phone, Instagram and Linktree URLs.
+- The supplied Google snapshot reports 5.0/5 from 333 reviews. Record this as a supplied snapshot, not a newly verified live figure.
+- An individual review's $30–40 range is not an official service price.
+- Do not infer individual star ratings from the overall Google rating; the pasted reviews do not provide reliable per-review ratings.
+- Preserve review wording when quoting. Mark truncated excerpts clearly and do not expand missing text or reuse the earlier paraphrased Jordan quote as a verbatim testimonial.
+- Use Linktree for Book Now until a direct WhatsApp booking link is verified. Do not assume the listed phone is the WhatsApp number.
+- Keep unknown prices, hours, staff details and policies in the internal pending-information list.
+- Do not invent awards, years of experience, guarantees, products or booking availability.
+
+### Completion checklist
+
+- [ ] Every proposed section has a purpose, draft copy and content requirements.
+- [ ] Header navigation and all calls to action have specified destinations.
+- [ ] Hero structure explicitly matches the supplied reference on desktop and mobile.
+- [ ] Supplied facts and unconfirmed details are clearly distinguished.
+- [ ] Review excerpts are faithful and individually attributed.
+- [ ] Image requirements and outstanding business details are documented.
+- [ ] `phase-1-content-plan.md` is ready to guide Phase 2.
+
+### Full Codex prompt — execute Phase 1
+
+```text
+You are preparing Phase 1 of a website project for New Relook Barbershop in Toronto, Canada.
+
+WORKING FOLDER
+canada/salon/New Relook Barbershop/
+
+Read the applicable repository instructions and the local file
+new-relook-barbershop-project.md before starting. Read this Phase 1 brief in
+prompts.md as well. Preserve existing user files and unrelated content.
+
+OBJECTIVE
+Create phase-1-content-plan.md in the working folder. Produce a complete,
+practical English content and page-structure blueprint for a single-page
+barbershop website. This phase is planning and copy preparation only.
+Do not build application code, install dependencies, generate images, send
+messages to the business or publish anything during this phase.
+
+BUSINESS INPUTS
+- Name: New Relook Barbershop.
+- Address: 1054 Eglinton Ave W, Toronto, ON M6C 2C5, Canada.
+- Phone: +1 647-222-3540.
+- Instagram: https://www.instagram.com/new_relook_barbershop/
+- Booking hub: https://linktr.ee/relookbarbershop
+- Google search/listing entry:
+  https://www.google.com/search?q=New+Relook+Barbershop
+- Supplied Google snapshot: 5.0/5, 333 reviews.
+- Customer reviews mention Amir, welcoming service, haircuts, fades, beard
+  grooming, children's haircuts and convenient WhatsApp booking. These are
+  customer-reported details; the official menu still needs confirmation.
+
+VISUAL REFERENCE REQUIREMENTS
+The user supplied a tall desktop/mobile barbershop reference. Preserve its
+dark brick setting, orange/gold accents, condensed uppercase typography,
+orange borders and section bands, deep shadows and dramatic hero.
+
+The hero is the highest-priority visual requirement:
+1. Dark brick backdrop with warm orange light near the edges.
+2. Oversized white NEW RELOOK lettering behind the central person.
+3. A large transparent barber/model cutout overlapping the lettering.
+4. A black gradient fading the lower cutout into the following section.
+5. A restrained location line and clear Book Now action that stay readable.
+
+Describe the layer stack, text/cutout overlap and responsive behavior in the
+blueprint. On mobile, keep the central person and large title composition,
+adjust the crop and prevent horizontal overflow. Do not promise exact pixel
+matching from the low-resolution reference. If the reference image is not
+available in the session, use this written direction and flag visual comparison
+as pending.
+
+The transparent AI model and real business/gallery images come later.
+Do not imply an AI model depicts Amir or an actual employee. Do not use AI
+haircut images as evidence of this shop's real work.
+
+REQUIRED OUTPUT SECTIONS IN phase-1-content-plan.md
+
+1. Project objective and audience
+   - Local Toronto customers seeking a welcoming neighborhood barber.
+   - Primary goal: help customers reach the existing booking channel.
+   - Secondary goals: calls, directions, service discovery and trust.
+
+2. Evidence and content inventory
+   - Separate supplied business facts, review-based observations and unknowns.
+   - Record each important value with its source and confidence/status.
+   - Treat follower counts and Google totals as supplied snapshots.
+   - Avoid claiming website absence has been conclusively verified.
+
+3. Single-page structure
+   - Header; Hero; Services; Meet Your Barber; Transformation Gallery;
+     Customer Reviews; Visit and Book; Footer.
+   - Assign an anchor, purpose, required content and primary action to each.
+   - Specify desktop/mobile reading order and header menu entries.
+   - Products remain optional pending confirmation that the shop sells them.
+   - No blog section until actual editorial content exists.
+
+4. Draft English website copy
+   - Write usable headings, short descriptions and button labels per section.
+   - Keep the tone confident, friendly and local; avoid generic luxury claims.
+   - Keep the hero brief so the title and model remain the visual focus.
+   - Draft service categories without invented prices or durations.
+   - Draft Amir's introduction without invented history or qualifications.
+   - Keep missing facts as internal notes, not public-facing filler copy.
+
+5. Hero composition brief
+   - Describe layers, title placement, model pose/framing, lighting and fade.
+   - Explain desktop and mobile placement of navigation, copy and CTA.
+   - Identify the future transparent image requirements.
+
+6. Testimonials
+   - Select 4–6 useful excerpts from the original pasted review text embedded
+     in the business project file, with reviewer names and exact wording.
+   - Do not use the earlier rewritten Jordan quote as an exact quote.
+   - Preserve truncation and never invent missing words or individual ratings.
+   - Store review dates as relative dates from the supplied snapshot, if used.
+
+7. Action and link map
+   - Book Now: existing Linktree URL until the direct booking URL is verified.
+   - Call: tel:+16472223540.
+   - Instagram: supplied public profile URL.
+   - Directions: a Google Maps search URL using the complete business address.
+   - Reviews: supplied Google listing/search URL.
+   - Mark the direct WhatsApp link as pending; do not derive it from the phone.
+
+8. Image and asset inventory
+   - Hero transparent AI model, brick texture, logo/wordmark, shop photos,
+     barber portrait and real haircut/before-and-after photos.
+   - For each asset specify purpose, preferred aspect ratio/format, desktop
+     and mobile crop needs, alt-text intent and current availability.
+   - Decorative images should have empty alt text in later implementation.
+
+9. Missing information and draft behavior
+   - Official service menu, prices, hours, direct WhatsApp booking URL,
+     staff names/roles, actual shop/gallery images and relevant policies.
+   - For every missing item explain what can be drafted now and what must
+     wait for confirmation. Do not block useful planning on missing images.
+
+10. Phase 1 acceptance checklist and Phase 2 handoff
+    - Confirm all sections, copy, links, hero directions and asset needs exist.
+    - Note anything requiring confirmation before public launch.
+    - Identify Phase 2 as visual design setup: colors, fonts, spacing,
+      backgrounds, buttons and reusable components based on this blueprint.
+
+EXECUTION RULES
+Use local supplied information for this phase. Additional browsing is not
+required to format and plan from those inputs; if you choose to verify a fact,
+cite the source and distinguish it from user-provided information.
+Do not convert customer anecdotes into official promises. Do not add shopping
+cart, accounts, checkout or a new booking system without a business requirement.
+
+Before finishing, inspect the completed Markdown for readable structure,
+consistent facts, faithful quotations and complete coverage of this brief.
+Then report the created file and the remaining information needed for later
+phases. Complete Phase 1 only; do not begin Phase 2 automatically.
+```
+
+## Phase 2 — Visual design setup
+
+### Goal
+
+Define the visual system and reusable interface foundations that will carry the reference's barbershop aesthetic through the entire website. Prepare the project foundation and a local component preview; the full hero is implemented in Phase 3 and the remaining page sections in Phase 4.
+
+### Inputs and dependencies
+
+- Read `new-relook-barbershop-project.md` and the completed `phase-1-content-plan.md`.
+- Use the desktop/mobile reference supplied in the conversation as the visual target.
+- This document currently contains phase instructions. Writing a prompt does not mean that phase has been executed. If the Phase 1 output is missing when this prompt is run, complete that prerequisite using the Phase 1 prompt first.
+- Hero and business images are pending. Plan transparent-image slots and use clearly labeled placeholders only in the internal preview.
+
+### Phase 2 tasks
+
+1. Inspect the project and applicable instructions; reuse an existing application stack where available.
+2. Translate the reference into a consistent palette, type hierarchy, spacing scale, texture treatment and responsive layout rules.
+3. Establish the website's application foundation if no application exists.
+4. Implement named design tokens and shared styles for backgrounds, headings, buttons, links, borders and focus states.
+5. Build reusable components for the header, section heading, orange divider band, buttons and framed cards.
+6. Add a local component preview showing the design system with sample content and a diagrammatic hero composition.
+7. Check the preview at mobile, tablet and desktop sizes, including keyboard access and text contrast.
+8. Save design decisions, asset needs and Phase 3 handoff notes in `phase-2-design-system.md`.
+
+### Starting visual tokens
+
+These values are initial implementation targets inferred from the reference, not exact sampled colors. Adjust them together after visual comparison.
+
+| Token | Starting value | Use |
+| --- | --- | --- |
+| Background | `#0C0907` | Main page canvas |
+| Panel | `#181311` | Cards and elevated areas |
+| Brick base | `#27150F` | Textured wall surface |
+| Primary orange | `#F58A16` | Main buttons, bands and borders |
+| Warm gold | `#D9A34B` | Small labels and secondary details |
+| Main text | `#F7F1E8` | Headings and body copy |
+| Muted text | `#C3B6A8` | Supporting descriptions |
+
+Use strongly condensed uppercase display type for major headings and a readable sans-serif for body text. A starting pairing is Anton for display headings and Inter for body text, subject to available font assets. Avoid applying condensed display type to paragraphs.
+
+### Layout and component direction
+
+- Center the content in a roughly 1200px maximum-width container with fluid side padding.
+- Use a restrained spacing scale and generous section separation without losing the dense reference character.
+- Apply warm edge glows and black gradients over brick texture. Keep text areas readable and the center of the hero visually clear.
+- Header: compact wordmark, desktop anchor navigation and orange booking button; mobile menu trigger with accessible expanded state.
+- Buttons: orange primary button with dark text; secondary treatment with a warm border; visible hover, focus and disabled states.
+- Cards: dark panels, controlled orange framing and modest corner radii matching the reference. Avoid pill-shaped styling throughout.
+- Orange section bands: full-width accents with bold dark headings, as seen around the reference's gallery and feedback sections.
+- Mobile: one-column section flow, scaled typography and touch targets of at least 44px; no horizontal overflow.
+- Motion: subtle optional transitions with reduced-motion support.
+
+### Hero preparation for Phase 3
+
+Document separate layers for the brick backdrop, warm lighting, oversized white brand text, transparent person, lower black fade and foreground copy/actions. Reserve image dimensions to reduce layout movement. In the preview, use a neutral silhouette or labeled bounding box to test overlap; do not generate the person or finish the hero in this phase.
+
+### Completion checklist
+
+- [ ] Project runs locally using documented commands.
+- [ ] Colors, typography, spacing, borders and responsive rules are centralized.
+- [ ] Reusable components appear together in a local preview.
+- [ ] Preview follows the dark brick/orange/condensed-type reference direction.
+- [ ] Mobile layout, keyboard controls and contrast have been checked.
+- [ ] Missing fonts/textures have documented fallbacks.
+- [ ] `phase-2-design-system.md` records implementation paths and the Phase 3 handoff.
+
+### Full Codex prompt — execute Phase 2
+
+```text
+Execute Phase 2: Visual design setup for New Relook Barbershop.
+
+WORKING FOLDER
+canada/salon/New Relook Barbershop/
+
+PREPARATION
+Read applicable repository instructions, the business project Markdown file,
+the Phase 1 output phase-1-content-plan.md and this Phase 2 brief in prompts.md.
+Use the relevant frontend-design skill if available, following its instructions.
+Inspect the existing files before making changes and preserve unrelated work.
+
+Check whether Phase 1 has actually been executed. If its output is missing,
+complete that prerequisite using the Phase 1 prompt in prompts.md, then proceed.
+Do not treat the existence of a Phase 1 prompt as a completed content plan.
+
+OBJECTIVE AND SCOPE
+Implement the shared visual foundation and a local component preview for the
+future website. Document the system in phase-2-design-system.md. Finish this
+phase without proceeding to full hero or page-section implementation.
+
+STACK AND PROJECT SETUP
+- Reuse an existing suitable framework, package manager and folder structure.
+- If there is no application, create a lightweight React + Vite application
+  with TypeScript in a website/ subfolder, keeping the planning Markdown files
+  in their existing location. Use npm unless project instructions specify otherwise.
+- Keep dependencies minimal and choose versions supported by the environment.
+- Record actual development and production-build commands.
+- Keep the preview local. Do not publish a site or contact the business.
+
+VISUAL TARGET
+The supplied reference shows a dark, textured barbershop site with orange/gold
+accents, tall condensed white/orange headings, thin warm borders, deep shadows,
+full-width orange bands and a dramatic person-over-title hero composition.
+Follow that direction closely on desktop and mobile.
+
+If the reference image is no longer available, use the written brief and mark
+direct visual comparison pending. Do not claim pixel-level matching.
+
+DESIGN TOKENS
+Implement semantic CSS custom properties (or the existing framework's equivalent)
+for the following starting palette:
+- canvas: #0C0907
+- panel: #181311
+- brick base: #27150F
+- primary orange: #F58A16
+- warm gold: #D9A34B
+- main text: #F7F1E8
+- muted text: #C3B6A8
+
+Check contrast in actual usage and adjust values as a coherent palette when
+necessary. Define spacing, content widths, heading sizes, corner radii, borders,
+shadows, transition durations and layer-order tokens too.
+
+TYPOGRAPHY
+- Choose a tall condensed display font close to the reference; Anton is a
+  starting candidate. Use a readable body sans-serif such as Inter.
+- Use available licensed local fonts or obtain fonts from an appropriate source;
+  document the source and retain required license files if bundling them.
+- Include dependable fallbacks and font-display: swap where applicable.
+- Use fluid heading sizes and comfortable body line-height. Long uppercase
+  titles must fit narrow mobile screens without clipping.
+
+BACKGROUND AND VISUAL EFFECTS
+- Build a layered dark brick background with restrained warm side lighting,
+  central shading and bottom fades.
+- Use an available appropriately licensed texture when possible. If none is
+  available, create a CSS approximation and document the texture as pending.
+- Keep effects behind text and controls, disable their pointer interaction and
+  avoid excessive image sizes, blur filters or repeating animations.
+
+REUSABLE COMPONENTS
+Create the smallest useful set of shared components:
+1. Page container with fluid side padding and approximately 1200px max width.
+2. Header with wordmark, anchor navigation and Book Now action.
+3. Mobile navigation with keyboard support, Escape-to-close behavior, focus
+   handling and accurate aria-expanded/aria-controls attributes.
+4. Primary/secondary button or link treatments with visible interaction states.
+5. Section heading with small eyebrow label and condensed title.
+6. Full-width orange heading band.
+7. Dark service-card visual shell and orange-framed gallery/review-card shells.
+
+Use meaningful semantic elements. Provide focus-visible styles and respect
+prefers-reduced-motion. Avoid generic pill cards and excessive rounded corners.
+
+LOCAL PREVIEW
+Build an internal component preview that demonstrates the palette, heading
+levels, body text, buttons, navigation and card variations. Do not present it
+as the finished customer-facing site. Preview-only labels and placeholders
+must remain confined to this internal view.
+
+Add a diagrammatic hero composition with these layers:
+- brick backdrop;
+- warm lighting;
+- oversized white NEW RELOOK text;
+- a neutral model silhouette or labeled transparent-image slot;
+- lower black fade;
+- short location copy and booking action in a readable foreground position.
+
+This is a layout aid for Phase 3, not a finished hero. Reserve image aspect
+ratios and document desktop/mobile crop, stacking and title overlap rules.
+Do not generate images during this phase or imply a placeholder is Amir.
+
+CONTENT AND LINKS
+Use the Phase 1 plan for copy and navigation. Use the supplied Linktree for
+Book Now, tel:+16472223540 for calls and the verified supplied Instagram URL.
+Keep pending service prices, hours and direct WhatsApp links out of public copy.
+Do not create fake live controls or links to nonexistent page sections in the
+preview: either demonstrate matching anchors or make sample states explicit.
+
+VALIDATION
+- Run the production build and any required project checks.
+- If browser tools are available, inspect the preview at approximately 390px,
+  768px and 1440px widths. Check narrow 320px layout for horizontal overflow.
+- Check keyboard navigation, mobile menu open/close, focus visibility, readable
+  text and heading wrapping. Check orange-button text and muted-text contrast.
+- Fix issues found within this phase. Report browser checks as pending if they
+  could not be performed; do not claim unperformed validation.
+
+DOCUMENTATION OUTPUT
+Write phase-2-design-system.md with:
+- Selected stack and commands.
+- Color and typography decisions, token names and file paths.
+- Shared component inventory and usage notes.
+- Background texture/font sources and outstanding assets.
+- Responsive layout and hero layer/crop specifications.
+- Validation performed and remaining limitations.
+- Phase 3 handoff: build the final reference-inspired hero using this foundation.
+
+Finish with a concise report naming the preview entry point, documentation,
+validation results and pending visual assets. Do not begin Phase 3 automatically.
+```
+
+## Phase 3 — Reference-style hero section
+
+### Goal
+
+Build the website's main hero using the Phase 2 foundation. The strongest visual feature must be oversized white brand lettering behind a large central transparent barber/model, against a dark brick wall with warm orange lighting and a lower black fade. Match the supplied reference's composition on desktop and mobile.
+
+### Inputs and dependencies
+
+- Completed `phase-1-content-plan.md` and `phase-2-design-system.md`.
+- The application, tokens and shared components created in Phase 2.
+- The supplied desktop/mobile reference, when available in the session.
+- A transparent hero image if available. The user intends to supply/generate images later, so build a replaceable image slot and polished fallback now. Image generation belongs to Phase 5 unless separately requested.
+
+### Phase 3 tasks
+
+1. Inspect the existing application and reuse the shared header, typography, colors and layout system.
+2. Build the real home-page hero with separate backdrop, lighting, title, model, fade and foreground-action layers.
+3. Adapt the reference's short title to the longer New Relook brand, testing a large `NEW RELOOK` line and a smaller `BARBERSHOP` descriptor.
+4. Define desktop and mobile compositions independently so the model overlaps the lettering while the business name and booking action remain readable.
+5. Connect the booking and phone actions to the existing business contact channels.
+6. Add responsive hero-image support with reserved dimensions and a fallback for missing assets.
+7. Check layout, keyboard access, reduced-motion behavior and image loading at relevant screen sizes.
+8. Record the implemented composition and outstanding image work in `phase-3-hero-notes.md`.
+
+### Composition specification
+
+| Layer | Appearance and behavior |
+| --- | --- |
+| Backdrop | Dark brick texture with a shaded center and warm orange light at the sides |
+| Brand title | Huge condensed white lettering across the upper hero; partially overlapped by the model |
+| Model | Central upper-body transparent cutout, ideally seated with crossed arms or a similarly strong pose |
+| Lower fade | Black gradient blending the lower cutout into the page background |
+| Foreground | Short Toronto location line and visible Book Now action placed outside the face/title overlap |
+| Header | Compact navigation integrated with the dark backdrop, above the hero content |
+
+Use the reference's proportions as the guide rather than forcing a generic full-screen layout. Prefer positioning within a bounded hero container; allow its height to accommodate content on short mobile screens. Keep decorative tools, if used, secondary and clear of the subject's face and controls.
+
+### Image requirements and fallback
+
+- Final asset: transparent PNG or WebP with clean hair/shoulder edges, sufficient resolution for high-density screens and no baked-in text, brick background or lighting rectangle.
+- Subject: decorative barber model with reference-inspired pose and clothing, not an asserted portrait of Amir.
+- Keep placement and crop configurable through a small set of styles or image configuration values.
+- If no cutout is available, retain the typography, brick wall, lighting and booking action in a deliberate temporary composition. The implementation must not show a broken image or an empty person-shaped hole to customers.
+- Document that visual matching remains incomplete until the final cutout and reference comparison are available.
+
+### Completion checklist
+
+- [ ] Real home-page hero uses the shared Phase 2 foundation.
+- [ ] Desktop and mobile preserve the title-behind-model composition when an image is available.
+- [ ] Brand name, short copy and booking action remain readable.
+- [ ] Booking/call links work and header navigation has valid destinations.
+- [ ] Missing-image fallback is usable and the model asset is easy to replace.
+- [ ] No horizontal overflow, clipped actions or inaccessible focus states.
+- [ ] Build and available browser checks pass; outstanding image work is documented.
+- [ ] `phase-3-hero-notes.md` provides a clear Phase 4 handoff.
+
+### Full Codex prompt — execute Phase 3
+
+```text
+Execute Phase 3: Build the reference-style hero for New Relook Barbershop.
+
+WORKING FOLDER
+canada/salon/New Relook Barbershop/
+
+PREPARATION
+Read applicable repository instructions, new-relook-barbershop-project.md,
+phase-1-content-plan.md, phase-2-design-system.md and the Phase 3 brief in
+prompts.md. Inspect the existing application before editing. Use the relevant
+frontend-design skill if available and follow its instructions.
+
+Check that the Phase 1 and Phase 2 outputs and application actually exist.
+If a prerequisite is missing, complete its documented prompt in order before
+this phase. Preserve user changes and reuse existing tokens and components.
+
+OBJECTIVE
+Build the main home-page hero to closely follow the user's supplied desktop
+and mobile barbershop reference. Work in the application created in Phase 2.
+Keep its internal component preview available for further design work.
+Create phase-3-hero-notes.md when finished.
+
+VISUAL PRIORITIES
+1. Dark brick backdrop with deep black shading and warm orange edge lighting.
+2. Oversized condensed white brand text behind the central person.
+3. Large transparent upper-body barber/model cutout overlapping the lettering.
+4. Lower black fade that blends the model into the next section.
+5. Compact navigation and restrained foreground copy/actions.
+
+Use the reference as the primary visual guide when it is available. If it is
+unavailable, follow this specification and report visual comparison pending.
+Do not claim an exact match without inspecting the reference and the output.
+
+BRAND AND COPY
+- Display NEW RELOOK prominently; place BARBERSHOP as a smaller descriptor
+  where it fits the composition.
+- Use concise English copy from Phase 1 and the Toronto/Eglinton West location.
+- Avoid adding an unconfirmed slogan, credentials, opening hours or prices.
+- Primary CTA: Book Now -> https://linktr.ee/relookbarbershop
+- Optional secondary CTA: Call Us -> tel:+16472223540
+- Keep navigation destinations valid. For later sections that do not exist yet,
+  omit their links temporarily rather than leaving dead anchors or adding
+  empty placeholder sections. Document them for Phase 4.
+
+IMPLEMENTATION
+- Reuse the Phase 2 header and design system. Improve their layout only where
+  needed for the hero, keeping shared styles consistent.
+- Implement explicit layers for background, lighting, title, model, lower fade
+  and readable foreground copy/actions. Define a predictable stacking order.
+- Keep decorative layers pointer-events: none and out of the accessibility tree.
+- Render the main heading as real HTML text with one meaningful H1. If visual
+  duplicates are needed, hide only the duplicates from assistive technology.
+- Use fluid typography, deliberate line breaks and suitable container widths
+  so the longer business name retains the reference's visual impact.
+- Avoid fragile absolute positioning of all content. Use normal layout for
+  meaningful copy/actions and bounded positioning for decorative overlap.
+- Respect the reference's visual density; do not impose a full viewport height
+  when it creates empty space or clips content on short screens.
+- Avoid unnecessary dependencies and heavy effects.
+
+HERO IMAGE HANDLING
+Inspect available project assets and use an appropriate supplied cutout if it
+exists. Do not present an unrelated shop or person as this business's real staff.
+The AI model is a decorative visual, not a verified portrait of Amir.
+
+The user plans to obtain/generate images later. Do not generate or buy images
+in this phase unless separately authorized. Prepare a clearly documented asset
+slot/configuration for a transparent PNG/WebP and support separate mobile crop
+values. Reserve width/aspect ratio to prevent layout movement.
+
+If the hero image is missing, implement a deliberate fallback featuring the
+brand typography, warm brick setting and booking action. Avoid broken image
+icons or public-facing development labels. Document the missing cutout and
+the remaining difference from the reference. Do not mark the image-dependent
+composition as visually complete until a real cutout is installed.
+
+If the model is purely decorative, use empty alt text. Serve appropriately
+sized image variants where practical. Do not lazy-load the principal visible
+hero image; avoid applying high fetch priority to multiple competing images.
+
+RESPONSIVE COMPOSITION
+Desktop:
+- Broad brand title behind a central upper-body model.
+- Model face stays clear of essential copy and navigation.
+- Warm edge lighting and lower fade connect the hero to the page canvas.
+
+Mobile:
+- Compact header and accessible menu.
+- Recompose title size, model position and crop for a narrow viewport.
+- Preserve the person-over-title visual relationship with an available asset.
+- Keep the business identifiable and booking action visible in normal flow.
+- Avoid horizontal scrolling, accidental clipping and a fixed height that
+  hides content when browser UI or text size changes.
+
+ACCESSIBILITY AND MOTION
+- Ensure text/button contrast, visible keyboard focus and touch targets.
+- Preserve mobile-menu keyboard and focus behavior from Phase 2.
+- Keep animation minimal and support prefers-reduced-motion.
+- Avoid scrolling effects that make copy or controls difficult to use.
+
+VALIDATION
+Run the production build and required project checks. When browser tooling is
+available, inspect approximately 320px, 390px, 768px and 1440px widths, plus a
+short mobile viewport. Check title wrapping, cutout overlap (if available),
+overflow, menu behavior, keyboard navigation and booking/call destinations.
+
+Inspect both the normal image path and the missing-image fallback. Compare
+desktop/mobile screenshots against the reference when available. Fix problems
+within this phase and report any checks that could not be performed.
+
+DOCUMENTATION
+Write phase-3-hero-notes.md containing:
+- Files/components changed and local preview commands.
+- Desktop/mobile composition and layer ordering.
+- Hero asset location, expected format and image/crop replacement instructions.
+- Any pending reference or asset work.
+- Validation results and known limitations.
+- Phase 4 handoff: build services, Meet Your Barber, transformation gallery,
+  reviews, Visit and Book, and footer using the established design system.
+
+Finish with a concise report describing the implemented hero, actual checks
+and remaining image work. Do not start Phase 4 or publish the site.
+```
+
+## Phase 4 — Complete the website sections
+
+### Goal
+
+Build the remaining single-page website around the Phase 3 hero: Services, Meet Your Barber, Transformation Gallery, Customer Reviews, Visit and Book, and Footer. Carry the reference's dark brick atmosphere, condensed typography, orange bands and framed imagery through the whole page.
+
+### Inputs and dependencies
+
+- Completed Phase 1 content plan, Phase 2 design system and Phase 3 hero implementation/notes.
+- The business information and original review text in `new-relook-barbershop-project.md`.
+- Existing shared components and the supplied visual reference when available.
+- Real shop, barber and haircut images remain pending until Phase 5. Build replaceable image slots with deliberate draft behavior.
+
+### Phase 4 tasks
+
+1. Read the earlier phase outputs and inspect the existing website before editing.
+2. Implement the remaining sections in the agreed order using shared components.
+3. Centralize service, review, contact and gallery data for easy confirmation and updates.
+4. Add header/footer anchor links and connect all booking, call, Instagram, directions and review actions.
+5. Adapt grids, typography, orange bands and gallery presentation for mobile.
+6. Use faithful attributed review excerpts and keep unconfirmed details out of public copy.
+7. Verify the complete page flow, link destinations and keyboard/mobile interactions.
+8. Save section implementation notes and remaining content/assets in `phase-4-page-notes.md`.
+
+### Section specifications
+
+| Section | Content | Reference-inspired treatment |
+| --- | --- | --- |
+| Services | Supported service categories, concise descriptions, booking action; prices only when confirmed | Condensed heading, dark grid, restrained orange accent card |
+| Meet Your Barber | Short supported introduction to Amir and the neighborhood shop | Dark feature panel; eventual real portrait/shop photo |
+| Transformation Gallery | Real haircut and before/after photos when supplied | Orange title band and framed images; static responsive grid initially |
+| Customer Reviews | 4–6 faithful named excerpts plus Google reviews link | Orange section band, dark review cards and readable text |
+| Visit and Book | Full address, phone, Instagram, Linktree and directions; hours when confirmed | Clear contact layout with an orange booking action |
+| Footer | Wordmark, concise navigation and contact/social links | Compact dark finish with warm separators |
+
+Products and blog sections stay conditional on actual business content. Do not add a shop, shopping cart or blog merely because the reference includes similar areas.
+
+### Content and image rules
+
+- Customer comments support draft service categories, but do not establish an official price list, exact duration or promise of availability.
+- Retain exact review wording and reviewer names. Do not assign individual stars from the overall rating or turn a rewritten summary into a quote.
+- Display the supplied aggregate rating only with its supplied-snapshot context; verify it before public launch.
+- Do not portray AI/stock models as staff or AI/stock haircuts as this shop's actual work.
+- If real gallery images are missing, build and preview the gallery component internally. Keep a useful Instagram action on the home page until genuine work images are supplied.
+- Use a text-led About section while a real barber/shop photo is pending.
+- Store pending hours, prices and policies in notes rather than showing fabricated values or developer placeholders.
+
+### Completion checklist
+
+- [ ] All agreed content sections are implemented or have documented asset-dependent behavior.
+- [ ] Page styling consistently follows the reference and existing hero.
+- [ ] Navigation reaches valid section IDs and every contact action has a real destination.
+- [ ] Service/review/gallery data is easy to update.
+- [ ] Reviews match their supplied source and unknown facts are not invented.
+- [ ] Desktop/mobile layouts, keyboard access and production build are checked.
+- [ ] `phase-4-page-notes.md` lists pending assets and the Phase 5 handoff.
+
+### Full Codex prompt — execute Phase 4
+
+```text
+Execute Phase 4: Complete the page sections for New Relook Barbershop.
+
+WORKING FOLDER
+canada/salon/New Relook Barbershop/
+
+PREPARATION
+Read applicable repository instructions, new-relook-barbershop-project.md,
+phase-1-content-plan.md, phase-2-design-system.md, phase-3-hero-notes.md and
+this Phase 4 brief in prompts.md. Inspect the application and preserve existing
+user changes. Use the relevant frontend-design skill if available, following
+its instructions.
+
+Check that the earlier phases have actually been implemented. If a prerequisite
+is missing, complete its documented prompt in order before continuing.
+Reuse the existing framework, styles, components and hero.
+
+OBJECTIVE
+Finish the single-page layout below the hero using the approved content plan
+and reference-inspired visual system. Implement Services, Meet Your Barber,
+Transformation Gallery, Customer Reviews, Visit and Book, and Footer.
+Document the result in phase-4-page-notes.md. Keep the site local in this phase.
+
+DESIGN CONTINUITY
+- Preserve the dark brick canvas, deep shadows, warm orange/gold accents,
+  tall condensed headings, orange borders and full-width heading bands.
+- Follow the reference's section rhythm and imagery treatment on desktop and
+  mobile while making the longer real content readable.
+- Reuse shared design tokens. Avoid introducing a disconnected template style.
+- Keep the Phase 3 hero composition intact while refining its transition into
+  the first section as needed.
+
+SECTIONS
+
+1. Services — id="services"
+   Implement a responsive grid using supported draft categories from Phase 1.
+   Keep descriptions concise and use consistent icons if an existing suitable
+   icon source is available. An orange accent card may provide the reference's
+   visual emphasis, but do not label a service "most popular" without evidence.
+   Do not invent prices, durations, services or discounts. Without an approved
+   price list, use a general booking/pricing enquiry action instead of numbers.
+
+2. Meet Your Barber — id="about"
+   Present Amir and the neighborhood shop using supported information and
+   restrained copy. Avoid invented qualifications, years of experience, awards
+   or a team roster inferred only from reviews. Use a text-led feature panel
+   while an authentic portrait/shop image is unavailable. Do not use the AI
+   hero model as an asserted portrait of Amir.
+
+3. Transformation Gallery — id="gallery"
+   Build an orange heading band and orange-framed responsive image component.
+   Use only genuine supplied shop work as customer haircut imagery. Preserve
+   paired before/after photos and their order when actual pairs are supplied;
+   do not invent pairs from unrelated images.
+
+   If assets are missing, demonstrate the component in the internal preview and
+   keep a polished home-page section inviting visitors to view work on Instagram.
+   Do not expose fake customer transformations, broken images or development
+   labels. Record the intended image slots for Phase 5. Start with a static grid;
+   add a slider only if it materially improves the actual content and is usable
+   with touch and keyboard. Avoid autoplay.
+
+4. Customer Reviews — id="reviews"
+   Use 4–6 faithful excerpts from the original review transcript embedded in
+   new-relook-barbershop-project.md, preferably the selections in Phase 1.
+   Preserve names and wording, mark omissions and do not expand truncated text.
+   Do not use the earlier rewritten Jordan quotation as a verbatim testimonial.
+   Do not invent per-review stars or infer them from the overall rating.
+
+   Style readable review cards beneath a reference-inspired orange section band.
+   Include a link to Google reviews. The supplied aggregate 5.0/333 figure is a
+   snapshot; retain source context if displaying it and flag live verification
+   for launch. Do not imply a fresh Google integration.
+
+5. Visit and Book — id="contact"
+   Include:
+   - Address: 1054 Eglinton Ave W, Toronto, ON M6C 2C5, Canada.
+   - Call: tel:+16472223540.
+   - Book Now: https://linktr.ee/relookbarbershop
+   - Instagram: https://www.instagram.com/new_relook_barbershop/
+   - Directions: a Google Maps search URL using the full address.
+
+   Use a regular directions link initially; a map embed is optional and should
+   not delay rendering or require unnecessary credentials. Add opening hours
+   only if confirmed. Keep the direct WhatsApp URL pending rather than deriving
+   it from the phone. The booking button should open the existing booking hub;
+   do not suggest a booking was submitted or confirmed by this website.
+
+6. Footer
+   Include the wordmark, useful section navigation, address/contact and social
+   links. Use concise text and a dark finish consistent with the page. Do not
+   add dead privacy/terms links or unverified agency/business claims.
+
+NAVIGATION AND DATA
+- Connect header/footer links to the actual section IDs.
+- Ensure sticky navigation does not obscure anchored headings; use appropriate
+  scroll offset and reduced-motion handling for smooth scroll.
+- Keep repeated business details, service categories, reviews and gallery items
+  in a clear typed data structure or the project's existing content system.
+- Preserve original review text and provenance where practical.
+- Do not create accounts, checkout, a blog, an ecommerce product catalogue or
+  a new booking backend in this phase.
+
+RESPONSIVENESS AND ACCESSIBILITY
+- Provide a natural section reading order and logical heading hierarchy.
+- Collapse grids for mobile while retaining clear spacing and readable copy.
+- Keep orange bands and display headings within narrow screen bounds.
+- Give informative images meaningful alt text and decorative imagery empty alt.
+- Use descriptive link labels, visible focus, sufficient contrast and usable
+  touch targets. Ensure all real interactions work with keyboard and touch.
+- Avoid unnecessary animation and respect prefers-reduced-motion.
+
+VALIDATION
+Run the production build and required checks. When browser tooling is available,
+inspect the complete page at roughly 320px, 390px, 768px and 1440px widths.
+Check section flow, horizontal overflow, long names/reviews, anchor offsets,
+header menu, booking/call/Instagram/directions destinations and missing-image
+behavior. Confirm review excerpts against the supplied transcript.
+
+Fix issues found within scope. Report any unperformed checks honestly. Do not
+broaden this into the full Phase 6 performance/SEO pass yet.
+
+DOCUMENTATION
+Write phase-4-page-notes.md with:
+- Implemented sections and changed files.
+- Content/data locations and update instructions.
+- Contact and navigation destinations.
+- Review source/selection notes and snapshot context.
+- Asset-dependent sections and their current fallback behavior.
+- Remaining official services/prices/hours/staff confirmations.
+- Validation results and limitations.
+- Phase 5 handoff: generate/integrate the transparent hero model and install
+  authentic shop/gallery images, with required crops/formats and image slots.
+
+Finish with a concise report of the completed page sections and pending assets.
+Do not start Phase 5, generate images, contact the business or publish the site.
+```
+
+## Phase 5 — Images and final visual assets
+
+### Goal
+
+Generate the transparent decorative barber/model for the hero and integrate available authentic business photos. Refine image crops, lighting and compression so the complete website approaches the reference on desktop and mobile.
+
+### Inputs and dependencies
+
+- The implemented website and completed Phase 1–4 documentation.
+- The supplied desktop/mobile visual reference when available.
+- Available user-supplied shop, barber, logo and haircut photos.
+- An image generation tool for the decorative hero model. Image generation happens when this phase is executed, not when this prompt is written.
+
+### Phase 5 tasks
+
+1. Inspect existing image slots and inventory all available assets before generating or replacing anything.
+2. Generate a reference-inspired barber/model cutout with a genuinely transparent background.
+3. Inspect the result for clean edges, natural hands/anatomy, correct pose and usable framing.
+4. Integrate the cutout into the hero and tune desktop/mobile crop and title overlap.
+5. Install authentic shop, barber and haircut photos supplied by the user.
+6. Preserve genuine before/after pairs; keep missing gallery/portrait content on its existing fallback.
+7. Create appropriately sized web assets, reserve image dimensions and provide suitable alt text.
+8. Verify image loading, transparency, responsive layout and the production build.
+9. Document asset sources, generated-image prompts, placement and remaining gaps in `phase-5-assets.md`.
+
+### Hero image brief
+
+- Fictional adult male barber model with a confident, welcoming expression.
+- Seated upper-body pose, forearms crossed/resting naturally, reference-inspired light shirt and dark barber apron or suspenders.
+- Head, shoulders, elbows and forearms fully inside the frame, with enough margin for responsive placement.
+- Warm rim lighting that blends into the orange/black website palette, with natural skin tones.
+- Transparent background with real alpha; no checkerboard pattern, text, logo, furniture backdrop or brick wall baked into the image.
+- Keep brick texture, title, edge glow and lower fade as separate website layers.
+- The generated person is decorative and must not be labeled as Amir or a real employee.
+
+### Asset handling
+
+| Asset | Source | Integration rule |
+| --- | --- | --- |
+| Hero model | AI generated | Transparent decorative cutout; eager-load when visible |
+| Shop/interior | Authentic supplied photos | Preserve accurate appearance and suitable crops |
+| Barber portrait | Authentic supplied photo | Use in About only when identity is confirmed |
+| Haircut gallery | Authentic supplied work | Preserve subjects and actual before/after relationships |
+| Logo | Supplied brand asset or existing text wordmark | Keep readable across backgrounds and screen sizes |
+| Brick texture | Existing or appropriately licensed asset | Tile subtly, optimize and retain provenance |
+
+Save originals separately from web derivatives. Prefer transparent WebP/PNG for the hero and efficient WebP/AVIF/JPEG variants for opaque photos where supported by the project's tooling. Choose dimensions from actual rendering needs rather than imposing an arbitrary size limit that damages quality.
+
+### Completion checklist
+
+- [ ] Hero cutout is generated, inspected and installed, or a specific tool limitation is documented.
+- [ ] Real alpha transparency is preserved and the subject fits desktop/mobile layouts.
+- [ ] Available authentic photos are integrated without invented transformations or staff identities.
+- [ ] Missing business photos retain deliberate fallbacks and are listed as pending.
+- [ ] Image dimensions, loading behavior, alt text and web formats are appropriate.
+- [ ] Build and available browser checks pass.
+- [ ] `phase-5-assets.md` records sources, prompts, files and Phase 6 handoff.
+
+### Full Codex prompt — execute Phase 5
+
+```text
+Execute Phase 5: Images and final visual assets for New Relook Barbershop.
+
+WORKING FOLDER
+canada/salon/New Relook Barbershop/
+
+PREPARATION
+Read applicable repository instructions, the business project Markdown and
+completed Phase 1–4 documentation. Inspect the website, current asset slots
+and available user-supplied images. Preserve existing files and useful originals.
+
+Check prerequisites. If earlier phase outputs or implementation are missing,
+complete their documented prompts in order before this phase.
+
+Use the available imagegen skill for raster image generation/editing, reading
+its instructions first. Follow the image tool's transparency and reference-image
+requirements. Use the frontend-design skill when refining website composition
+if available. This prompt authorizes generating the decorative hero image when
+executed; it does not authorize publishing or contacting the business.
+
+OBJECTIVE
+Generate and integrate a high-quality transparent hero barber/model. Install
+available authentic shop and haircut images, optimize delivery, and document
+the result in phase-5-assets.md. Preserve the reference-inspired visual system.
+
+ASSET INVENTORY
+First identify:
+- Existing hero image/configuration and responsive crop settings.
+- User-supplied shop, barber, logo and haircut assets.
+- Genuine before/after pairs and their original order.
+- Existing texture/font/graphic assets and their sources.
+
+Do not assume the reference image or Instagram photos are available locally.
+Do not use the temporary Instagram CDN profile-image link as a dependable
+production asset. Prefer stable local user-supplied assets. Record unavailable
+items and continue with work that does not depend on them.
+
+HERO GENERATION PROMPT
+Use this as the starting image-generation brief, refining it after inspecting
+the available reference and website framing:
+
+"Create a photorealistic fictional adult male barber model as an isolated
+transparent-background cutout for a dramatic barbershop website hero. Confident
+but welcoming expression, well-groomed hair and beard, light cream shirt with
+rolled sleeves and dark barber apron or suspenders. Seated upper-body portrait
+with forearms crossed or resting naturally in front, facing the camera, strong
+centered silhouette. Keep the complete head, shoulders, elbows, forearms and
+hands inside the frame with generous transparent margins. Natural anatomy,
+realistic skin, detailed clean hair edges, subtle warm amber rim lighting and
+soft directional studio illumination suited to a dark brick/orange website.
+No text, lettering, brand logo, watermark, background scene, brick wall or
+checkerboard pattern. Produce actual alpha transparency. This is a decorative
+fictional model, not a portrait of the shop owner."
+
+Request transparent_background=true when supported. Use a supplied reference
+only through the tool's supported reference mechanism. Preserve the pose and
+lighting direction of the reference without claiming the fictional subject is
+the same real person. Keep all website title/background layers out of the asset.
+
+Inspect the generated image before integration. Check hands, arms, face,
+clothing, edge halos, clipping and actual transparency. Use the image generation
+tool for needed visual edits, following its instructions. Do not silently accept
+a flat opaque background or visibly defective anatomy.
+
+If image generation is unavailable or fails, keep the Phase 3 fallback, document
+the limitation and asset requirements, and integrate other available photos.
+Do not claim the final hero image is complete when it is not.
+
+HERO INTEGRATION
+- Save the original generated result and an optimized transparent web version.
+- Update the existing image slot instead of rebuilding the hero from scratch.
+- Tune scale, object positioning and responsive offsets so the person overlaps
+  the large white title with the intended visual hierarchy.
+- Keep the face clear of navigation and important copy. Preserve recognizability
+  of the business name and visibility of the booking action.
+- Keep lighting, brick background and lower black fade in separate CSS layers.
+- Use configurable desktop/mobile crop values and reserved image dimensions.
+- For a decorative cutout use empty alt text. Load the primary visible image
+  eagerly and avoid lazy-loading the page's likely largest visible image.
+
+AUTHENTIC BUSINESS PHOTOS
+- Install available genuine shop and haircut images in the appropriate sections.
+- Use a real barber portrait only when the depicted person's identity is supplied.
+- Never substitute an AI hero model for Amir's portrait.
+- Never label AI/stock haircut photos as this shop's work or create fictional
+  before/after pairs. Do not alter a customer's haircut outcome to improve it.
+- Keep original before/after ordering and use similar framing where possible
+  without distorting the photos or changing their meaning.
+- If actual gallery photos remain unavailable, retain the Instagram-based
+  fallback from Phase 4 and list the missing assets. Do not block unrelated work.
+- Preserve the text-led About section when no confirmed portrait is available.
+
+OPTIMIZATION AND ACCESSIBILITY
+Use the available image pipeline to produce sensible dimensions and modern
+formats. Preserve alpha for the model; opaque gallery photos can use WebP/AVIF
+or suitable JPEG fallbacks. Avoid needless upscaling and retain originals.
+
+Provide responsive variants/srcset where beneficial. Reserve dimensions to
+reduce layout movement, lazy-load offscreen photos and use accurate alt text
+for informative photos. Keep decorative imagery out of the reading order.
+Check that aggressive compression does not damage hair detail or transparency.
+
+VALIDATION
+Run the production build and required checks. When browser tooling is available,
+inspect the hero and page at approximately 320px, 390px, 768px and 1440px widths.
+Check transparency, crop, title overlap, face visibility, image loading, broken
+paths, layout movement and gallery aspect ratios. Inspect missing-image behavior.
+Compare desktop/mobile screenshots with the supplied reference when available.
+Report unavailable checks or missing reference imagery honestly.
+
+DOCUMENTATION
+Write phase-5-assets.md containing:
+- Asset inventory: purpose, source/type, original path and web derivative path.
+- Generation prompt(s), reference usage and generation/editing notes.
+- Hero image configuration and desktop/mobile crop values.
+- Dimensions/formats, loading behavior and relevant alt-text choices.
+- Font/texture/photo source or license notes when applicable.
+- Missing authentic images and any content-dependent fallbacks still present.
+- Validation results and remaining limitations.
+- Phase 6 handoff: complete functionality testing, performance, accessibility
+  and basic SEO checks using the finalized available assets.
+
+Finish with a concise report of images generated/integrated and remaining gaps.
+Do not start Phase 6, publish the site, buy assets or contact the business.
+```
+
+## Phase 6 — Functionality, testing and basic SEO
+
+### Goal
+
+Verify the implemented website, fix defects and prepare a tested build for the final polish/deployment phase. Check actual customer journeys, mobile behavior, accessibility, loading performance and search metadata while preserving the reference-inspired design.
+
+### Inputs and dependencies
+
+- The application and completed Phase 1–5 documentation.
+- Available final assets and the Phase 5 list of missing images.
+- Supplied business contact information and any subsequently confirmed services, hours or booking links.
+- A final production domain only if already chosen; do not invent one.
+
+### Phase 6 tasks
+
+1. Inspect the implementation, existing checks and earlier notes; record outstanding content/asset gaps.
+2. Test booking, call, Instagram, directions, reviews and section-navigation journeys.
+3. Check responsive layout, keyboard access, focus, contrast and reduced-motion behavior.
+4. Fix reproducible issues in scope and rerun the affected checks.
+5. Optimize image delivery, fonts and application loading based on measured issues.
+6. Add accurate page metadata, favicon and social preview settings using available assets.
+7. Add local-business structured data using supported facts; defer domain-dependent metadata until the deployment URL is known.
+8. Run the production build and verify its locally served output.
+9. Save evidence, limitations and launch readiness in `phase-6-validation.md`.
+
+### Verification scope
+
+| Area | What to check |
+| --- | --- |
+| Customer actions | Book Now reaches Linktree; phone URI is correct; Instagram, Maps and Google links point to this Toronto business |
+| Navigation | Anchors exist, sticky header does not cover headings, mobile menu works with keyboard/touch |
+| Responsive layout | Narrow phones, standard mobile, tablet, desktop and short viewports; no clipped text or horizontal scrolling |
+| Accessibility | Semantic headings, accessible names, focus visibility/order, contrast, image alternatives and reduced motion |
+| Performance | Actual network/image sizes, hero loading, font behavior, layout shifts and unnecessary scripts |
+| SEO | Title, description, language, crawlable content, favicon and supported structured data |
+| Content | Correct Toronto identity, faithful review excerpts and no invented prices/hours or stale claims presented as live |
+
+### SEO and launch rules
+
+- Use the business name and Toronto location naturally; do not promise rankings or add keyword stuffing.
+- Do not reuse the unrelated Jordan `relooksalon.com` domain anywhere.
+- Add canonical, absolute social-image URLs and sitemap entries only when the real deployment origin is known.
+- Use schema.org `HairSalon` JSON-LD with supported business name, address, telephone and supplied social profile. Omit unconfirmed opening hours, prices, geographic coordinates and ratings markup.
+- Keep private/demo deployments out of search indexing. Document the launch-time change to indexable metadata when the real site is approved for publication.
+- Do not add analytics, tracking, contact forms or a booking backend without a requirement. If such features already exist, inspect their actual behavior and document dependencies.
+
+### Completion checklist
+
+- [ ] Customer action links and menu/anchor interactions have been checked.
+- [ ] Responsive and accessibility issues found in scope are fixed or documented.
+- [ ] Production build passes and its served output has been inspected where tooling allows.
+- [ ] SEO metadata uses accurate business information and no invented domain.
+- [ ] Performance findings include actual measurement context rather than unsupported scores.
+- [ ] Content/asset gaps and launch-time configuration are explicitly listed.
+- [ ] `phase-6-validation.md` includes evidence and a Phase 7 handoff.
+
+### Full Codex prompt — execute Phase 6
+
+```text
+Execute Phase 6: Functionality, testing and basic SEO for New Relook Barbershop.
+
+WORKING FOLDER
+canada/salon/New Relook Barbershop/
+
+PREPARATION
+Read applicable repository instructions, the business project Markdown and
+completed Phase 1–5 outputs. Inspect the application, package scripts, existing
+tests and asset inventory. Preserve user changes and the agreed visual design.
+
+Check prerequisites. If earlier phase implementation is missing, complete its
+documented prompt in order. Missing authentic business photos do not prevent
+testing the deliberate fallbacks; record the associated launch limitations.
+
+Use the agent-browser skill for browser-based website testing when available,
+reading its instructions before use. Use official documentation if a technical
+configuration needs verification. Do not claim checks that were not performed.
+
+OBJECTIVE
+Test the existing website, fix reproducible defects and implement basic SEO.
+Create phase-6-validation.md with actual evidence and remaining launch items.
+Keep the website local. Do not deploy, submit bookings or contact the business.
+
+FUNCTIONAL CHECKS
+Verify every implemented navigation/contact action:
+- Book Now -> https://linktr.ee/relookbarbershop unless a verified direct
+  booking destination has subsequently been supplied.
+- Call -> tel:+16472223540.
+- Instagram -> https://www.instagram.com/new_relook_barbershop/
+- Directions -> Google Maps search using the full Toronto business address.
+- Reviews -> the supplied Google business search/listing entry.
+- Header/footer anchors -> real sections with sensible scroll offsets.
+
+Check href values and local interactions. Open external destinations only as
+needed for read-only verification; do not send messages, make calls, reserve
+appointments or submit forms. Report external pages blocked by login/network
+restrictions separately from incorrect URLs.
+
+Test the mobile menu's open/close behavior, aria-expanded state, keyboard
+operation, Escape behavior, focus handling and behavior on viewport changes.
+Check any gallery controls actually implemented; do not add a carousel merely
+to create something to test. Detect dead buttons and misleading confirmation UI.
+
+RESPONSIVE AND ACCESSIBILITY CHECKS
+Inspect approximately 320px, 390px, 768px and 1440px widths, a short mobile
+viewport and text zoom/enlargement where tooling permits.
+
+Check:
+- Horizontal overflow, clipped titles, overlapping content and unreachable CTAs.
+- Hero title/person composition, image fallback and readable booking controls.
+- Long review/name wrapping, card grids and orange section-band headings.
+- Logical headings/landmarks, accessible names and natural reading order.
+- Keyboard focus order and visibility, menu access and descriptive link labels.
+- Contrast for body text, gold labels, orange buttons and controls.
+- Informative image alt text and empty alt text for decorative images.
+- Reduced-motion behavior and usable touch targets.
+
+Fix concrete issues while retaining the reference-inspired design. Automated
+accessibility scans can supplement manual checks; do not describe a clean scan
+as proof of complete accessibility compliance.
+
+PERFORMANCE
+Inspect actual asset/network sizes and the production bundle before optimizing.
+Check hero loading priority, responsive photo sizes, reserved image dimensions,
+font loading and unnecessary scripts/dependencies. Optimize measured problems
+without degrading the reference's essential imagery or introducing complexity.
+
+Run Lighthouse or equivalent measurements if available. Record tool, URL,
+viewport/device profile and relevant conditions. Treat lab metrics as lab
+results, not real-user Core Web Vitals. Do not invent scores or promise a fixed
+score. If measurement tooling is unavailable, report the checks actually done.
+
+BASIC SEO
+- Set a concise title such as "New Relook Barbershop | Toronto" and an accurate
+  description grounded in the approved copy.
+- Set document language to English and ensure important copy is real readable
+  HTML text rather than embedded in images.
+- Preserve one main H1 and a logical section hierarchy.
+- Add a suitable favicon using the supplied brand asset or existing wordmark
+  treatment; do not claim an invented graphic is the official logo.
+- Add Open Graph/social metadata when the required title, description and
+  suitable image asset exist. Do not invent an absolute production URL.
+- Add schema.org HairSalon JSON-LD using supported name, postal address,
+  telephone and supplied Instagram sameAs URL. Omit unconfirmed coordinates,
+  opening hours, prices, aggregateRating and per-review ratings markup.
+- Do not use the unrelated Jordan business/domain relooksalon.com.
+
+If the final deployment origin is unknown, document canonical, og:url, absolute
+social image URL and sitemap generation as Phase 7 configuration. Do not ship
+example.com or localhost as production metadata. If the origin is known, use
+the actual origin consistently and ensure sitemap URLs describe existing pages,
+not section anchors masquerading as separate pages.
+
+Keep draft/demo builds noindex through the project's deployment-aware metadata
+configuration. Document how Phase 7 enables indexing for the approved final
+site. Do not confuse robots.txt crawl blocking with removal from search results.
+
+CONTENT INTEGRITY
+Check business name, Toronto address, telephone and source-based copy. Review
+testimonials against the original supplied text. Do not assign missing stars,
+invent prices/hours or describe supplied review totals as freshly verified.
+List remaining confirmations before public launch. Keep developer notes and
+missing-data labels out of customer-facing copy.
+
+TESTING AND FIXES
+Run existing appropriate lint/type/build checks. Add focused tests only for
+meaningful behavior or a regression that warrants them; avoid tests that simply
+duplicate static markup. Fix failures relevant to this project and rerun the
+affected checks. Serve and inspect the production build if tooling permits.
+Do not introduce analytics, new forms, a backend or unrelated features.
+
+DOCUMENTATION
+Write phase-6-validation.md with:
+- Environment, commands, tested URLs/viewports and tools actually used.
+- Functional check results and external verification limitations.
+- Accessibility/responsive findings, fixes and any unresolved issues.
+- Performance measurements with context and resulting optimizations.
+- SEO changes, structured-data fields and deployment-dependent items.
+- Build/check results and inspected production-output status.
+- Pending authentic assets, business confirmations and severity/launch impact.
+- Phase 7 handoff: final visual polish, hosting configuration, real origin,
+  preview review and authorized publication.
+
+Finish with a concise statement of what passed and what remains. Do not claim
+launch readiness if material content or interaction issues remain unresolved.
+Do not start Phase 7, publish, buy services or contact the business.
+```
+
+## Phase 7 — Final polish, preview and deployment
+
+### Goal
+
+Finish the visual details, prepare a reviewable production build and deploy to the hosting destination authorized by the user. Distinguish a sales/demo preview from the business's approved official site, with appropriate indexing and domain settings.
+
+### Inputs and dependencies
+
+- Implemented website and completed Phase 1–6 documentation.
+- Phase 6 validation results and outstanding content/asset items.
+- An existing hosting target or a user-selected destination, with available account access.
+- The intended release type: demo preview or official business launch.
+- A confirmed domain only when one has actually been selected and authorized.
+
+### Phase 7 tasks
+
+1. Review the complete site and resolve remaining in-scope visual and functional defects.
+2. Compare desktop/mobile composition with the reference, especially the hero, spacing, gallery borders and orange section bands.
+3. Run the final build and affected checks; prepare a local reviewable result before any missing publication decision is requested.
+4. Configure the existing authorized hosting target, deployment origin, assets and metadata for the intended release type.
+5. Deploy when publication to that destination is already authorized; otherwise report the concrete prepared result and the specific missing destination or authority.
+6. Inspect the deployed URL if deployment occurs and check representative customer actions and asset loading.
+7. Document the release, remaining business confirmations, update instructions and recovery procedure in `phase-7-handoff.md`.
+
+### Release modes
+
+| Mode | Purpose | Configuration |
+| --- | --- | --- |
+| Local review | Review the completed build before hosting is chosen | Local production preview; no invented public URL |
+| Demo preview | Show the proposed website to the prospective client | User-authorized preview hosting; noindex; clearly identify its demo status |
+| Official launch | Publish the business-approved website | Confirmed domain, accurate final content, production metadata and intentional indexing |
+
+Publishing a demo does not make it the shop's official website. A noindex directive limits search indexing but does not make a public preview private; use available access controls if privacy is required.
+
+### Final checks and handoff
+
+- Preserve the approved dark brick/orange design and reference-style hero.
+- Keep unconfirmed hours/prices and missing authentic images as explicit handoff items, with usable site behavior.
+- Set canonical, social URLs and sitemap to the real deployment origin when appropriate. Do not use the unrelated Jordan domain.
+- Do not purchase domains/plans, change DNS, replace an existing live site or modify unrelated infrastructure without authorization for that specific scope.
+- Keep credentials out of source files, browser bundles and documentation.
+- Record the actual deployment URL, revision/build identity where available, and a practical rollback or redeployment procedure.
+
+### Completion checklist
+
+- [ ] Final desktop/mobile review and affected checks are completed or limitations documented.
+- [ ] Build is ready to inspect locally.
+- [ ] Release mode and authorized hosting destination are identified.
+- [ ] Deployment-dependent metadata matches the intended URL and indexing mode.
+- [ ] Authorized deployment is verified, or the exact remaining deployment requirement is reported.
+- [ ] `phase-7-handoff.md` includes update commands, release details and remaining content items.
+
+### Full Codex prompt — execute Phase 7
+
+```text
+Execute Phase 7: Final polish, preview and deployment for New Relook Barbershop.
+
+WORKING FOLDER
+canada/salon/New Relook Barbershop/
+
+PREPARATION
+Read applicable repository instructions, the business project Markdown and
+completed Phase 1–6 documentation. Inspect the application and current working
+changes. Review phase-6-validation.md for unresolved defects and launch items.
+Check whether the previous phases have actually been executed; complete any
+missing prerequisite using its documented prompt before proceeding.
+
+Use relevant frontend-design/browser skills for visual refinement and testing
+when available. If a specific hosting service or tool requires a skill, read
+that skill before using it. Preserve unrelated user changes and existing assets.
+
+OBJECTIVE
+Polish the completed website, prepare a reviewable production build and deploy
+only within the user's authorized hosting/publication scope. Create
+phase-7-handoff.md with actual release details and operating instructions.
+
+FINAL VISUAL PASS
+Compare the available reference and the implemented desktop/mobile website.
+Focus on:
+- Oversized white title behind the transparent model, face visibility, warm
+  side lighting, lower fade and a readable booking action.
+- Consistent brick atmosphere, condensed headings, orange bands and framing.
+- Spacing, section transitions, image crops, card alignment and review wrapping.
+- Mobile typography, menu layout, touch targets and short-viewport behavior.
+
+Fix concrete issues without redesigning the agreed style. If a final model,
+authentic gallery photos or the reference itself are unavailable, preserve
+deliberate fallbacks and document the visual limitation rather than claiming
+the reference has been fully matched.
+
+FINAL CONTENT AND BUILD
+Confirm business name, Toronto address, contact links and source-faithful
+testimonials. Do not fabricate prices, opening hours or ratings. Keep pending
+business confirmations in the handoff, not as developer text on the site.
+
+Run the production build and appropriate existing checks. Recheck any behavior
+affected by final edits. Serve the production output locally and inspect it
+when tooling permits. Do not repeat broad testing without a change or unresolved
+issue that warrants it. Record checks that could not be performed.
+
+RELEASE DECISION AND AUTHORIZATION
+Inspect conversation instructions and existing deployment configuration for:
+- Intended release type: local review, demo preview or official launch.
+- Authorized hosting service/project and available access.
+- Confirmed custom domain, if any.
+
+Do not infer that this prospective-client demo is the business's official site.
+Use the release scope the user actually authorized. If hosting/publication to
+the chosen destination is already authorized, proceed without asking again.
+If the target or necessary publication authority is missing, complete all local
+polish, build and review work first. Then ask one concise question identifying
+the exact missing destination or decision. Do not claim deployment occurred.
+
+Do not buy a domain/plan, change DNS, overwrite an existing live site or modify
+unrelated hosting resources without authorization covering that action. Avoid
+inventing approval requirements for routine reversible local implementation.
+
+HOSTING CONFIGURATION
+Reuse an existing suitable deployment setup when present. Keep dependencies
+and provider configuration minimal. Use the actual build command and output
+directory from this project. Verify asset/base paths and routing for the chosen
+host. Do not add a backend for a static page without an actual requirement.
+
+Use existing authenticated tools or supported deployment workflows. Keep
+credentials out of client code, commits, logs and handoff notes. Document only
+environment-variable names that are actually needed.
+
+DEMO PREVIEW MODE
+- Deploy only to the authorized preview destination.
+- Keep noindex metadata and appropriate preview identification so the proposal
+  is not presented as the shop's approved official website.
+- Do not add the demo to search engines or the business's Google profile.
+- Explain that noindex does not provide access control if privacy is relevant;
+  use available preview protection when required by the user.
+
+OFFICIAL LAUNCH MODE
+- Use the business-approved domain and confirmed content.
+- Resolve material launch blockers recorded in Phase 6 or report them clearly.
+- Set canonical, og:url, absolute social image URLs and sitemap URLs using the
+  actual production origin. Keep them consistent and remove draft placeholders.
+- Enable indexing intentionally for the approved public release and check for
+  conflicting noindex headers/metadata. Keep private/demo URLs out of indexing.
+- Retain supported local-business structured data without fabricated fields.
+- Do not use relooksalon.com; that belongs to the unrelated Jordan business.
+
+DEPLOYMENT VERIFICATION
+If deployment is authorized and succeeds, open the actual deployed URL and
+check that the intended build is served, assets/fonts load, mobile layout works,
+navigation reaches sections and booking/contact destinations remain correct.
+Confirm HTTPS and intended indexability/preview protection where applicable.
+Use read-only interaction; do not send messages, place calls or make bookings.
+
+If deployment fails, investigate safe in-scope causes and fix them where possible.
+Report the exact remaining issue and retain the working local build. Do not
+expose secrets or broaden into unrelated account/infrastructure changes.
+
+HANDOFF DOCUMENT
+Write phase-7-handoff.md containing:
+- Actual status: locally ready, demo deployed or official site deployed.
+- Local development/build/preview commands and relevant project paths.
+- Hosting destination and deployed URL if deployment actually occurred.
+- Release/build identifier or revision when available; do not invent one.
+- Domain, metadata, indexing mode and required environment variable names.
+- Content/image update locations and hero crop replacement instructions.
+- Verification performed and any unresolved limitations.
+- Remaining business confirmations and authentic asset needs.
+- Recovery procedure using the provider's known rollback/redeploy workflow,
+  or instructions to redeploy a retained working version if rollback is absent.
+
+Finish with a concise report linking to the local handoff and deployed preview
+when available. State remaining blockers plainly. Do not contact the business,
+alter its social/Google listings or perform purchases as part of this phase.
+```

@@ -1,0 +1,261 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 920" fill="none">
+  <defs>
+    <!-- Warm amber rim light and studio gradients -->
+    <linearGradient id="skinLight" x1="260" y1="120" x2="540" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F2C6A0" />
+      <stop offset="55%" stop-color="#D79F76" />
+      <stop offset="100%" stop-color="#8F5B3C" />
+    </linearGradient>
+    <linearGradient id="skinShadow" x1="350" y1="180" x2="490" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C98E67" />
+      <stop offset="100%" stop-color="#6E4128" />
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="290" y1="45" x2="510" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5A3A27" />
+      <stop offset="30%" stop-color="#2B1B13" />
+      <stop offset="80%" stop-color="#140D09" />
+      <stop offset="100%" stop-color="#F58A16" stop-opacity="0.65" />
+    </linearGradient>
+    <linearGradient id="beardGrad" x1="310" y1="240" x2="490" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B251A" />
+      <stop offset="50%" stop-color="#1B110C" />
+      <stop offset="92%" stop-color="#0E0806" />
+      <stop offset="100%" stop-color="#D9A34B" stop-opacity="0.5" />
+    </linearGradient>
+    <linearGradient id="shirtMain" x1="160" y1="410" x2="640" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F7EFE4" />
+      <stop offset="45%" stop-color="#E6DACB" />
+      <stop offset="82%" stop-color="#B9AA99" />
+      <stop offset="100%" stop-color="#75675A" />
+    </linearGradient>
+    <linearGradient id="shirtFold" x1="250" y1="440" x2="550" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D4C4B4" />
+      <stop offset="100%" stop-color="#8C7B6B" />
+    </linearGradient>
+    <linearGradient id="suspenderGrad" x1="250" y1="400" x2="310" y2="780" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3D2214" />
+      <stop offset="50%" stop-color="#22120A" />
+      <stop offset="100%" stop-color="#120905" />
+    </linearGradient>
+    <linearGradient id="rimOrangeLeft" x1="110" y1="360" x2="320" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F58A16" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#D9A34B" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#F58A16" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="rimOrangeRight" x1="690" y1="360" x2="480" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F58A16" stop-opacity="0.85" />
+      <stop offset="40%" stop-color="#D9A34B" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#F58A16" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="chairBack" x1="180" y1="280" x2="620" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#261710" />
+      <stop offset="50%" stop-color="#130C09" />
+      <stop offset="100%" stop-color="#080504" />
+    </linearGradient>
+    <linearGradient id="forearmLeft" x1="150" y1="620" x2="520" y2="780" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E8B891" />
+      <stop offset="60%" stop-color="#C88E65" />
+      <stop offset="100%" stop-color="#7D4C2F" />
+    </linearGradient>
+    <linearGradient id="forearmRight" x1="640" y1="620" x2="290" y2="790" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DEA982" />
+      <stop offset="55%" stop-color="#B97E56" />
+      <stop offset="100%" stop-color="#6E4026" />
+    </linearGradient>
+    <filter id="softDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Subtle vintage barber chair crest behind shoulders (pure alpha around outside) -->
+  <g filter="url(#softDrop)">
+    <path d="M205 465 C205 355 275 305 400 305 C525 305 595 355 595 465 L625 785 L175 785 Z" fill="url(#chairBack)" stroke="#3D2417" stroke-width="3" />
+    <path d="M230 470 C230 378 292 332 400 332 C508 332 570 378 570 470" stroke="#D9A34B" stroke-width="2" stroke-opacity="0.4" />
+    <!-- Tufted leather diamond details -->
+    <circle cx="275" cy="400" r="4" fill="#D9A34B" fill-opacity="0.35" />
+    <circle cx="525" cy="400" r="4" fill="#D9A34B" fill-opacity="0.35" />
+  </g>
+
+  <!-- TORSO & ROLLED-SLEEVE CREAM SHIRT -->
+  <g filter="url(#softDrop)">
+    <!-- Main shoulders and chest -->
+    <path
+      d="M128 665 C134 535 178 448 258 416 L332 392 L468 392 L542 416 C622 448 666 535 672 665 L685 835 L115 835 Z"
+      fill="url(#shirtMain)"
+    />
+    <!-- Warm amber rim lighting on left and right shoulders/sleeves -->
+    <path
+      d="M128 665 C134 535 178 448 258 416 L285 408 C210 445 168 530 162 665 L155 810 L118 810 Z"
+      fill="url(#rimOrangeLeft)"
+    />
+    <path
+      d="M672 665 C666 535 622 448 542 416 L515 408 C590 445 632 530 638 665 L645 810 L682 810 Z"
+      fill="url(#rimOrangeRight)"
+    />
+
+    <!-- Shirt realistic fabric folds & drapery -->
+    <path d="M265 445 C285 520 295 600 280 685" stroke="url(#shirtFold)" stroke-width="5" stroke-linecap="round" opacity="0.55" />
+    <path d="M535 445 C515 520 505 600 520 685" stroke="url(#shirtFold)" stroke-width="5" stroke-linecap="round" opacity="0.55" />
+    <path d="M355 470 L345 645" stroke="url(#shirtFold)" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+    <path d="M445 470 L455 645" stroke="url(#shirtFold)" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+    <path d="M205 535 C235 565 250 610 235 655" stroke="url(#shirtFold)" stroke-width="4" stroke-linecap="round" opacity="0.5" />
+    <path d="M595 535 C565 565 550 610 565 655" stroke="url(#shirtFold)" stroke-width="4" stroke-linecap="round" opacity="0.5" />
+
+    <!-- Center button placket -->
+    <path d="M386 425 L414 425 L416 690 L384 690 Z" fill="#DFD2C3" stroke="#B8A796" stroke-width="1.5" />
+    <circle cx="400" cy="485" r="4.5" fill="#2A1911" />
+    <circle cx="400" cy="545" r="4.5" fill="#2A1911" />
+    <circle cx="400" cy="605" r="4.5" fill="#2A1911" />
+
+    <!-- Rolled sleeve cuffs (Left & Right) -->
+    <path
+      d="M116 635 C145 612 208 622 238 652 L226 698 C192 675 138 668 108 686 Z"
+      fill="#EFE5D8"
+      stroke="#B8A795"
+      stroke-width="2.5"
+    />
+    <path
+      d="M684 635 C655 612 592 622 562 652 L574 698 C608 675 662 668 692 686 Z"
+      fill="#E5D9C9"
+      stroke="#A89684"
+      stroke-width="2.5"
+    />
+
+    <!-- Neck & Open Collar -->
+    <path d="M336 330 L464 330 L476 425 L400 462 L324 425 Z" fill="url(#skinShadow)" />
+    <!-- Shirt Collar Flaps -->
+    <path d="M318 372 L396 452 L338 475 L292 406 Z" fill="#F5EDE2" stroke="#C5B6A5" stroke-width="2" />
+    <path d="M482 372 L404 452 L462 475 L508 406 Z" fill="#EAE0D3" stroke="#B8A897" stroke-width="2" />
+
+    <!-- Dark Leather Barber Suspenders & Brass Buckles -->
+    <path d="M254 415 L290 404 L318 695 L278 695 Z" fill="url(#suspenderGrad)" stroke="#4E2E1D" stroke-width="1.5" />
+    <path d="M546 415 L510 404 L482 695 L522 695 Z" fill="url(#suspenderGrad)" stroke="#4E2E1D" stroke-width="1.5" />
+    <!-- Brass Hardware Buckles -->
+    <rect x="271" y="555" width="44" height="22" rx="3" fill="none" stroke="#D9A34B" stroke-width="4" />
+    <line x1="271" y1="566" x2="315" y2="566" stroke="#F58A16" stroke-width="2" />
+    <rect x="485" y="555" width="44" height="22" rx="3" fill="none" stroke="#D9A34B" stroke-width="4" />
+    <line x1="485" y1="566" x2="529" y2="566" stroke="#F58A16" stroke-width="2" />
+  </g>
+
+  <!-- CROSSED FOREARMS & HANDS IN FOREGROUND (Matching Reference Pose) -->
+  <g filter="url(#softDrop)">
+    <!-- Right Forearm (tucked slightly under left hand) -->
+    <path
+      d="M675 678 C642 745 555 782 435 776 L265 758 C235 752 222 715 248 692 L448 682 C528 678 585 655 612 638 Z"
+      fill="url(#forearmRight)"
+    />
+    <!-- Subtle traditional barber tattoo linework on right forearm -->
+    <g opacity="0.28" stroke="#1E1410" stroke-width="2.2" fill="none">
+      <path d="M520 705 C545 698 575 710 595 728" />
+      <path d="M505 725 C538 718 568 728 588 744" />
+      <circle cx="555" cy="718" r="14" />
+      <path d="M540 718 L570 718 M555 704 L555 732" />
+    </g>
+
+    <!-- Left Forearm (crossing in front) -->
+    <path
+      d="M125 675 C162 748 258 792 395 788 L545 772 C578 766 592 732 568 704 L375 674 C285 662 222 648 188 635 Z"
+      fill="url(#forearmLeft)"
+    />
+    <!-- Subtle geometric tattoo shading on left forearm -->
+    <g opacity="0.3" stroke="#1E1410" stroke-width="2.2" fill="none">
+      <path d="M215 695 C255 688 295 702 330 725" />
+      <path d="M235 722 C275 715 315 725 348 742" />
+      <polygon points="275,695 298,715 275,735 252,715" />
+    </g>
+
+    <!-- Wristwatch / Leather Cuff on Left Wrist -->
+    <rect x="488" y="700" width="28" height="68" rx="5" transform="rotate(8 488 700)" fill="#1D110B" stroke="#D9A34B" stroke-width="2.5" />
+    <circle cx="500" cy="734" r="14" fill="#0C0907" stroke="#D9A34B" stroke-width="3" />
+
+    <!-- Right Hand resting on left elbow -->
+    <path
+      d="M248 688 C215 682 192 698 188 722 C184 745 206 760 242 758 L272 754 Z"
+      fill="url(#skinLight)"
+    />
+    <!-- Left Hand resting naturally over right forearm -->
+    <path
+      d="M522 702 C558 698 588 712 595 736 C600 758 576 774 538 772 L512 768 Z"
+      fill="url(#skinLight)"
+    />
+    <!-- Warm bottom edge rim highlight on crossed arms -->
+    <path
+      d="M165 735 C265 795 525 795 635 735"
+      stroke="#F58A16"
+      stroke-width="4"
+      stroke-opacity="0.45"
+      stroke-linecap="round"
+    />
+  </g>
+
+  <!-- HEAD, POMPADOUR HAIRCUT & FULL GROOMED BEARD (Overlaps Hero Title) -->
+  <g filter="url(#softDrop)">
+    <!-- Ears -->
+    <path d="M302 215 C284 212 276 234 282 258 C287 278 299 286 310 282 Z" fill="url(#skinShadow)" />
+    <path d="M498 215 C516 212 524 234 518 258 C513 278 501 286 490 282 Z" fill="url(#skinShadow)" />
+
+    <!-- Face / Forehead / Cheekbones -->
+    <path
+      d="M306 152 C306 112 345 92 400 92 C455 92 494 112 494 152 L496 275 C496 335 456 385 400 385 C344 385 304 335 304 275 Z"
+      fill="url(#skinLight)"
+    />
+    <!-- Dramatic studio side shadow on right side of face -->
+    <path
+      d="M400 92 C455 92 494 112 494 152 L496 275 C496 335 456 385 400 385 Z"
+      fill="url(#skinShadow)"
+      opacity="0.42"
+    />
+
+    <!-- Brows & Confident Piercing Eyes -->
+    <path d="M332 198 C348 190 370 192 384 198" stroke="#1E120C" stroke-width="7" stroke-linecap="round" />
+    <path d="M468 198 C452 190 430 192 416 198" stroke="#1E120C" stroke-width="7" stroke-linecap="round" />
+    <!-- Eyes -->
+    <ellipse cx="358" cy="214" rx="14" ry="6.5" fill="#180F0A" />
+    <circle cx="358" cy="213" r="4.5" fill="#3B2314" />
+    <circle cx="356" cy="211" r="1.8" fill="#F7F1E8" />
+
+    <ellipse cx="442" cy="214" rx="14" ry="6.5" fill="#180F0A" />
+    <circle cx="442" cy="213" r="4.5" fill="#3B2314" />
+    <circle cx="440" cy="211" r="1.8" fill="#F7F1E8" />
+
+    <!-- Nose bridge and subtle highlight -->
+    <path d="M400 202 L397 258 C392 266 408 266 403 258 Z" fill="#EAAFA0" fill-opacity="0.35" />
+    <path d="M385 262 C394 270 406 270 415 262" stroke="#7A482D" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- Styled Pompadour & Taper Fade Haircut (High-Detail Silhouette) -->
+    <path
+      d="M298 212 C292 175 294 132 308 102 C298 72 325 36 378 32 C418 28 468 38 492 68 C514 94 510 148 502 212 C496 175 486 146 468 134 C442 142 395 144 345 132 C320 145 306 175 298 212 Z"
+      fill="url(#hairGrad)"
+    />
+    <!-- Hair texture strands & warm orange rim light on top/sides -->
+    <path d="M322 86 C355 54 425 52 472 78" stroke="#D9A34B" stroke-width="3" stroke-opacity="0.55" stroke-linecap="round" />
+    <path d="M338 106 C375 78 435 78 478 102" stroke="#8A5A3B" stroke-width="2.5" stroke-opacity="0.6" stroke-linecap="round" />
+    <path d="M312 68 C345 36 420 30 478 58" stroke="#F58A16" stroke-width="2.5" stroke-opacity="0.7" stroke-linecap="round" />
+
+    <!-- Full Sculpted Barber Beard & Mustache -->
+    <path
+      d="M303 232 C306 262 322 282 348 286 C365 272 385 268 400 272 C415 268 435 272 452 286 C478 282 494 262 497 232 L502 288 C502 356 462 426 400 434 C338 426 298 356 298 288 Z"
+      fill="url(#beardGrad)"
+    />
+    <!-- Styled handlebar/barber mustache -->
+    <path
+      d="M342 292 C362 272 388 272 400 284 C412 272 438 272 458 292 C442 304 415 302 400 293 C385 302 358 304 342 292 Z"
+      fill="#2A1911"
+      stroke="#5C3B28"
+      stroke-width="1.5"
+    />
+    <!-- Subtle lower lip highlight beneath mustache -->
+    <path d="M382 304 C394 309 406 309 418 304" stroke="#B87658" stroke-width="3.5" stroke-linecap="round" />
+    <!-- Beard texture lines & warm rim glow -->
+    <path d="M318 332 C340 385 372 415 400 422 C428 415 460 385 482 332" stroke="#6E4730" stroke-width="2" stroke-opacity="0.55" />
+    <path d="M302 295 C306 362 346 422 400 432 C454 422 494 362 498 295" stroke="#F58A16" stroke-width="2" stroke-opacity="0.45" />
+  </g>
+
+  <!-- Lower black gradient blend built into bottom 110px of cutout -->
+  <linearGradient id="bottomCutoutFade" x1="400" y1="730" x2="400" y2="920" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#0C0907" stop-opacity="0" />
+    <stop offset="65%" stop-color="#0C0907" stop-opacity="0.88" />
+    <stop offset="100%" stop-color="#0C0907" stop-opacity="1" />
+  </linearGradient>
+  <rect x="80" y="730" width="640" height="190" fill="url(#bottomCutoutFade)" />
+</svg>
