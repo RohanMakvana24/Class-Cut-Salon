@@ -32,12 +32,25 @@ export const Header: React.FC<HeaderProps> = ({
   const useLightSurface = isScrolled;
 
   useEffect(() => {
+    let frameId = 0;
+    let lastScrolled = window.scrollY > 24;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 24);
+      if (frameId) return;
+      frameId = window.requestAnimationFrame(() => {
+        const nextScrolled = window.scrollY > 24;
+        if (nextScrolled !== lastScrolled) {
+          lastScrolled = nextScrolled;
+          setIsScrolled(nextScrolled);
+        }
+        frameId = 0;
+      });
     };
-    handleScroll();
+    setIsScrolled(lastScrolled);
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (frameId) window.cancelAnimationFrame(frameId);
+    };
   }, []);
 
   useEffect(() => {
@@ -79,7 +92,7 @@ export const Header: React.FC<HeaderProps> = ({
       className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-300 ${
         !isScrolled
           ? 'bg-transparent border-b border-transparent shadow-none'
-          : 'bg-white/95 border-b border-[#C28B37]/25 backdrop-blur-md shadow-[0_6px_24px_rgba(20,14,10,0.12)]'
+          : 'bg-white/[0.98] border-b border-[#C28B37]/25 shadow-[0_4px_18px_rgba(20,14,10,0.1)]'
       }`}
     >
       <div className="max-w-[1380px] mx-auto flex items-center justify-between gap-4 sm:gap-6 px-4 sm:px-8 lg:px-12 py-2 sm:py-2.5">
@@ -195,7 +208,7 @@ export const Header: React.FC<HeaderProps> = ({
         <nav
           id="mobile-nav-drawer"
           aria-label="Mobile section navigation"
-          className={`md:hidden border-b px-5 pt-3 pb-6 shadow-2xl backdrop-blur-md ${
+          className={`md:hidden border-b px-5 pt-3 pb-6 shadow-2xl ${
             isLight
               ? 'bg-[#FAF6EE]/98 border-[#C28B37]/35 text-[#1A130E]'
               : 'bg-[#120E0B]/98 border-[#DFAF63]/40 text-[#F7F1E8]'

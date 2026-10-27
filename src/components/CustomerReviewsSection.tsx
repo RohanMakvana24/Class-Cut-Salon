@@ -132,10 +132,23 @@ export const CustomerReviewsSection: React.FC = () => {
   useEffect(() => {
     let rafId = 0;
     let lastTime = performance.now();
+    let isVisible = false;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const observer = new IntersectionObserver(
+      ([entry]) => { isVisible = entry.isIntersecting && !document.hidden; },
+      { rootMargin: '120px 0px' }
+    );
+    if (trackRef.current) observer.observe(trackRef.current);
     // Smooth continuous speed in px/second
     const baseSpeedPxPerSec = 42;
 
     const animate = (now: number) => {
+      rafId = requestAnimationFrame(animate);
+      if (!isVisible || prefersReducedMotion) {
+        lastTime = now;
+        return;
+      }
+      if (now - lastTime < 32) return;
       const dt = Math.min(0.05, (now - lastTime) * 0.001);
       lastTime = now;
 
@@ -166,11 +179,13 @@ export const CustomerReviewsSection: React.FC = () => {
         trackEl.style.transform = `translate3d(${-offsetRef.current.toFixed(2)}px, 0, 0)`;
       }
 
-      rafId = requestAnimationFrame(animate);
     };
 
     rafId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(rafId);
+    return () => {
+      cancelAnimationFrame(rafId);
+      observer.disconnect();
+    };
   }, []);
 
   const handleManualStep = (direction: 'left' | 'right') => {
@@ -234,7 +249,7 @@ export const CustomerReviewsSection: React.FC = () => {
       {/* Subtle Ambient Gold Highlight */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 left-1/4 -translate-y-1/2 w-[560px] h-[340px] rounded-full bg-[#FACC15]/[0.05] blur-[130px]"
+        className="pointer-events-none absolute top-1/2 left-1/4 hidden md:block -translate-y-1/2 w-[560px] h-[340px] rounded-full bg-[#FACC15]/[0.05] blur-[100px]"
       />
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">

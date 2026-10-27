@@ -151,12 +151,13 @@ export const VisitAndBookSection: React.FC = () => {
     setShowPlaceholderOverlay(false);
   }, []);
 
-  // Attach non-passive wheel listener so scrolling over map zooms smoothly and hides placeholder
+  // Keep normal page scrolling over the map. Ctrl/Cmd + wheel intentionally zooms it.
   useEffect(() => {
     const el = mapContainerRef.current;
     if (!el) return;
 
     const onWheel = (e: WheelEvent) => {
+      if (!e.ctrlKey && !e.metaKey) return;
       e.preventDefault();
       const delta = e.deltaY < 0 ? 1 : -1;
       setZoom((prev) => Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, prev + delta)));
@@ -274,7 +275,7 @@ export const VisitAndBookSection: React.FC = () => {
       {/* Subtle Ambient Gold Radial Glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[350px] rounded-full bg-[#DFAF63]/[0.05] blur-[120px]"
+        className="pointer-events-none absolute bottom-0 left-1/2 hidden md:block -translate-x-1/2 w-[900px] h-[350px] rounded-full bg-[#DFAF63]/[0.05] blur-[96px]"
       />
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">

@@ -50,7 +50,7 @@
     scroll-padding-top: 5rem;
   }
 
-  @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto !important;
     }
@@ -63,6 +63,33 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+/* Skip layout/paint work for long sections until they approach the viewport. */
+main > section:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 760px;
+}
+
+/* Prevent scroll chaining and keep touch scrolling on the compositor. */
+body {
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+main > section {
+  contain: layout paint;
+}
+
+@keyframes clientFloat {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.015); }
+  50% { transform: translate3d(0, -7px, 0) scale(1.025); }
+}
+
+.animate-client-float {
+  animation: clientFloat 6s ease-in-out infinite;
+  transform-origin: 50% 35%;
+  will-change: transform;
 }
 
 .font-sans {
@@ -534,8 +561,208 @@ html[data-theme="light"] .review-scroll-card {
   display: none;
 }
 
+.products-scroll-track {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(229, 185, 111, 0.55) rgba(223, 175, 99, 0.08);
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.products-scroll-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.products-scroll-track::-webkit-scrollbar-track {
+  background: rgba(223, 175, 99, 0.08);
+  border-radius: 999px;
+}
+
+.products-scroll-track::-webkit-scrollbar-thumb {
+  background: rgba(229, 185, 111, 0.55);
+  border-radius: 999px;
+}
+
 .review-Overlap-mask {
   background: linear-gradient(90deg, rgba(12, 9, 7, 0.65) 0%, rgba(12, 9, 7, 0) 100%);
+}
+
+/* Prism-style coverflow: GPU-only slide motion and a short gold colour sweep. */
+.rising-ink {
+  display: block;
+  color: var(--ink-face);
+  perspective: 900px;
+  cursor: default;
+}
+
+.rising-ink > span {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: visible;
+}
+
+.rising-ink__letter,
+.rising-ink__space { display: inline-block; }
+.rising-ink__space { width: .28em; }
+
+.rising-ink__letter {
+  --ink-rise: 0px;
+  --ink-depth: 0px;
+  --ink-tilt-x: 0deg;
+  --ink-tilt-y: 0deg;
+  --ink-glow: 0;
+  position: relative;
+  z-index: 1;
+  transform: translate3d(0, calc(var(--ink-rise) * -1), var(--ink-depth)) rotateX(var(--ink-tilt-x)) rotateY(var(--ink-tilt-y));
+  transform-style: preserve-3d;
+  transform-origin: 50% 100%;
+  color: var(--ink-face);
+  text-shadow:
+    0 calc(var(--ink-depth) * .25) 0 color-mix(in srgb, var(--ink-near) 92%, transparent),
+    0 calc(var(--ink-depth) * .5) 0 color-mix(in srgb, var(--ink-near) 72%, var(--ink-far)),
+    0 calc(var(--ink-depth) * .75) 0 color-mix(in srgb, var(--ink-near) 42%, var(--ink-far)),
+    0 var(--ink-depth) 0 var(--ink-far),
+    0 calc(var(--ink-depth) + 8px) 22px rgba(0, 0, 0, calc(var(--ink-glow) * .45));
+  transition: transform 110ms cubic-bezier(.2,.8,.2,1), text-shadow 110ms ease;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rising-ink__letter { transform: none !important; text-shadow: none !important; transition: none; }
+}
+
+.prism-carousel {
+  position: relative;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.prism-carousel__stage {
+  position: relative;
+  height: clamp(23rem, 54vw, 38rem);
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+.prism-carousel__slide {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(64vw, 34rem);
+  aspect-ratio: 1.5;
+  overflow: hidden;
+  border: 1px solid rgba(229, 185, 111, 0.32);
+  border-radius: 1.25rem;
+  background: #140f0c;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.48);
+  transform-origin: center;
+  transition: transform 700ms cubic-bezier(.22,.8,.22,1), opacity 500ms ease, filter 650ms ease;
+  will-change: transform, opacity;
+}
+
+.prism-carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.prism-carousel__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(8, 5, 3, 0.9) 100%);
+}
+
+.prism-carousel__caption {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 2;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  color: #f7f1e8;
+}
+
+.prism-carousel__caption p {
+  margin-bottom: .35rem;
+  color: #e5b96f;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .68rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.prism-carousel__caption h3 {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(1.5rem, 4vw, 2.35rem);
+  line-height: 1;
+}
+
+.prism-carousel__sweep {
+  position: absolute;
+  inset: -20%;
+  z-index: 1;
+  background: linear-gradient(105deg, transparent 33%, rgba(194, 139, 55, .3) 43%, rgba(255, 242, 198, .62) 50%, rgba(120, 52, 28, .24) 58%, transparent 67%);
+  mix-blend-mode: color-dodge;
+  animation: prism-sweep 1100ms cubic-bezier(.2,.75,.25,1) both;
+}
+
+.prism-carousel__sweep.is-reversed { animation-direction: reverse; }
+
+@keyframes prism-sweep {
+  from { transform: translate3d(-75%, 0, 0) skewX(-8deg); opacity: 0; }
+  18% { opacity: 1; }
+  to { transform: translate3d(75%, 0, 0) skewX(-8deg); opacity: 0; }
+}
+
+.prism-carousel__controls {
+  position: relative;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  margin-top: .75rem;
+}
+
+.prism-carousel__controls > button {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid rgba(229, 185, 111, .38);
+  border-radius: 999px;
+  color: #e5b96f;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.prism-carousel__controls > button:hover {
+  color: #0c0907;
+  background: #e5b96f;
+  transform: scale(1.04);
+}
+
+.prism-carousel__controls svg { width: 1.1rem; height: 1.1rem; }
+.prism-carousel__dots { display: flex; align-items: center; gap: .45rem; pointer-events: auto; }
+.prism-carousel__dots button {
+  width: .42rem;
+  height: .42rem;
+  border-radius: 999px;
+  background: rgba(229, 185, 111, .3);
+  cursor: pointer;
+  transition: width 250ms ease, background-color 250ms ease;
+}
+.prism-carousel__dots button.is-active { width: 1.65rem; background: #e5b96f; }
+
+@media (max-width: 640px) {
+  .prism-carousel__stage { height: 24rem; }
+  .prism-carousel__slide { width: min(78vw, 28rem); aspect-ratio: 4 / 5; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prism-carousel__slide { transition-duration: 1ms; }
+  .prism-carousel__sweep { animation: none; }
 }
 
 html[data-theme="light"] .review-Overlap-mask {

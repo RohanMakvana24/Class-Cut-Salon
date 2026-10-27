@@ -171,6 +171,19 @@ export const ShaderCard: React.FC<ShaderCardProps> = ({
     if (!canvas) return;
 
     let animationFrameId = 0;
+    let isVisible = false;
+    let lastDrawTime = 0;
+    const minFrameMs = window.matchMedia('(max-width: 767px)').matches ? 66 : 42;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const visibilityObserver = new IntersectionObserver(
+      ([entry]) => { isVisible = entry.isIntersecting && !document.hidden; },
+      { rootMargin: '160px 0px' }
+    );
+    visibilityObserver.observe(canvas);
+    const handleVisibilityChange = () => {
+      isVisible = !document.hidden && canvas.getBoundingClientRect().bottom >= -160 && canvas.getBoundingClientRect().top <= window.innerHeight + 160;
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
     const gl =
       canvas.getContext('webgl', { antialias: true, depth: false, stencil: false }) ||
       (canvas.getContext('experimental-webgl') as WebGLRenderingContext | null);
@@ -221,6 +234,9 @@ export const ShaderCard: React.FC<ShaderCardProps> = ({
             const startTime = performance.now();
 
             const renderWebGL = (now: number) => {
+              animationFrameId = requestAnimationFrame(renderWebGL);
+              if (!isVisible || (lastDrawTime && now - lastDrawTime < minFrameMs)) return;
+              lastDrawTime = now;
               const elapsed = (now - startTime) * 0.001;
               // Smooth exponential damping for mouse coordinates
               mouseSmoothRef.current.x +=
@@ -237,13 +253,14 @@ export const ShaderCard: React.FC<ShaderCardProps> = ({
                 flameTheme === 'gold' ? 1 : flameTheme === 'emerald' ? 2 : 0
               );
               gl.drawArrays(gl.TRIANGLES, 0, 6);
-              animationFrameId = requestAnimationFrame(renderWebGL);
             };
 
-            animationFrameId = requestAnimationFrame(renderWebGL);
+            if (!prefersReducedMotion) animationFrameId = requestAnimationFrame(renderWebGL);
 
             return () => {
               cancelAnimationFrame(animationFrameId);
+              visibilityObserver.disconnect();
+              document.removeEventListener('visibilitychange', handleVisibilityChange);
               gl.deleteBuffer(buffer);
               gl.deleteProgram(program);
               gl.deleteShader(vs);
@@ -260,6 +277,9 @@ export const ShaderCard: React.FC<ShaderCardProps> = ({
 
     const startTime = performance.now();
     const render2DFallback = (now: number) => {
+      animationFrameId = requestAnimationFrame(render2DFallback);
+      if (!isVisible || (lastDrawTime && now - lastDrawTime < minFrameMs)) return;
+      lastDrawTime = now;
       const t = (now - startTime) * 0.0011 + phaseOffset;
       const w = canvas.width;
       const h = canvas.height;
@@ -300,11 +320,14 @@ export const ShaderCard: React.FC<ShaderCardProps> = ({
         ctx.fillRect(0, 0, w, h);
       });
 
-      animationFrameId = requestAnimationFrame(render2DFallback);
     };
 
-    animationFrameId = requestAnimationFrame(render2DFallback);
-    return () => cancelAnimationFrame(animationFrameId);
+    if (!prefersReducedMotion) animationFrameId = requestAnimationFrame(render2DFallback);
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      visibilityObserver.disconnect();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, [flameTheme, phaseOffset]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {

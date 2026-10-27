@@ -98,7 +98,7 @@ export const ServicesSection: React.FC = () => {
       {/* Subtle Ambient Gold Radial Glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[380px] rounded-full bg-[#DFAF63]/[0.06] blur-[130px]"
+        className="pointer-events-none absolute -top-40 left-1/2 hidden md:block -translate-x-1/2 w-[900px] h-[380px] rounded-full bg-[#DFAF63]/[0.06] blur-[100px]"
       />
 
       <div className="relative z-10 mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-12">
